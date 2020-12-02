@@ -4,6 +4,7 @@ def main():
   for i in range(0,(slatt*slatt)) :
     list1.append(int(input()))
   j = row_creator(list1,slatt)
+  print(j)
 
 def row_creator(list1 , n):
   row1 = []
@@ -30,7 +31,6 @@ def row_creator(list1 , n):
   sum_5 =0
   sums1 =0
   sums2 =0
-  sums3 =0
 
   if n == 2:
     for i in range(0,2):
@@ -65,35 +65,35 @@ def row_creator(list1 , n):
     for z in range(20,25):
       row5.append(list1[z])
   if n == 2:
-    column1.append(list1[0],list1[2])
-    column2.append(list1[1], list1[3])
+    column1.extend((list1[0],list1[2]))
+    column2.extend((list1[1], list1[3]))
   elif n == 3:
-    column1.append(list1[0],list1[3], list1[6])
-    column2.append(list1[1], list1[4],list1[7])
-    column3.append(list1[2],list1[5],list1[8])
+    column1.extend((list1[0],list1[3], list1[6]))
+    column2.extend((list1[1], list1[4],list1[7]))
+    column3.extend((list1[2],list1[5],list1[8]))
   elif n == 4:
-    column1.append(list1[0],list1[4], list1[8],list1[12])
-    column2.append(list1[1], list1[5],list1[9],list1[13])
-    column3.append(list1[2],list1[6],list1[10],list1[14])
-    column4.append(list1[3],list1[7],list1[11],list1[15])
+    column1.extend((list1[0],list1[4], list1[8],list1[12]))
+    column2.extend((list1[1], list1[5],list1[9],list1[13]))
+    column3.extend((list1[2],list1[6],list1[10],list1[14]))
+    column4.extend((list1[3],list1[7],list1[11],list1[15]))
   elif n ==5:
-    column1.append(list1[0],list1[5], list1[10],list1[15],list1[20])
-    column2.append(list1[1], list1[6],list1[11],list1[16],list1[21])
-    column3.append(list1[2],list1[7],list1[12],list1[17],list1[22])
-    column4.append(list1[3],list1[8],list1[13],list1[18],list1[23])
-    column5.append(list1[4],list1[9], list1[14],list1[19],list1[24])
+    column1.extend((list1[0],list1[5], list1[10],list1[15],list1[20]))
+    column2.extend((list1[1], list1[6],list1[11],list1[16],list1[21]))
+    column3.extend((list1[2],list1[7],list1[12],list1[17],list1[22]))
+    column4.extend((list1[3],list1[8],list1[13],list1[18],list1[23]))
+    column5.extend((list1[4],list1[9], list1[14],list1[19],list1[24]))
   if n == 2:
-    diag1.append(list1[0],list1[3])
-    diag2.append(list1[1],list1[2])
+    diag1.extend((list1[0],list1[3]))
+    diag2.extend((list1[1],list1[2]))
   elif n == 3:
-    diag1.append(list1[0],list1[4],list1[8])
-    diag2.append(list1[2],list1[4],list1[6])
+    diag1.extend((list1[0],list1[4],list1[8]))
+    diag2.extend((list1[2],list1[4],list1[6]))
   elif n == 4:
-    diag1.append(list1[0],list1[5],list1[10],list1[15])
-    diag2.append(list1[3],list1[6],list1[9],list1[12])
+    diag1.extend((list1[0],list1[5],list1[10],list1[15]))
+    diag2.extend((list1[3],list1[6],list1[9],list1[12]))
   elif n == 5:
-    diag1.append(list1[0],list1[6],list1[12],list1[18],list1[24])
-    diag2.append(list1[4],list1[8],list1[12],list1[16],list1[20])
+    diag1.extend((list1[0],list1[6],list1[12],list1[18],list1[24]))
+    diag2.extend((list1[4],list1[8],list1[12],list1[16],list1[20]))
   for i in row1:
     sum1 += i
   for i in row2:
@@ -119,15 +119,11 @@ def row_creator(list1 , n):
   for i in diag2:
     sums2 += i
   
-  if (sum1 == sum2 and sum2 == sum3 and sum3 == sum4 and sum4 == sum5) and (sum5 == sum_1 and sum_1 == sum_2 and sum_2 == sum_3 and sum_3 == sum_4 and sum_4 == sum_5) and (sum_5 == diag1 and diag1 == diag2):
+  if sum1 == sum2 and sum2 == sum3 and sum3 == sum4 and sum4 == sum5 and sum5 == sum_1 and sum_1 == sum_2 and sum_2 == sum_3 and sum_3 == sum_4 and sum_4 == sum_5 and sum_5 == diag1 and diag1 == diag2:
     return "This is a magic square"
-  else:
-    return "Bro thats not a magic square"
   
 main()
 
 
-
-    
-
+#BU AMK kODU ÇALIŞMIYOR
 
