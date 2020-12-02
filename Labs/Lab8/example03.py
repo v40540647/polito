@@ -96,12 +96,12 @@ def row_creator(list1 , n):
     diag2.extend((list1[4],list1[8],list1[12],list1[16],list1[20]))
   for i in row1:
     sum1 += i
-  for i in row2:
-    sum2 += i
-  for i in row3:
-    sum3 += i
-  for i in row4:
-    sum4 += i
+  for j in row2:
+    sum2 += j
+  for s in row3:
+    sum3 += s
+  for s in row4:
+    sum4 += s
   for i in row5:
     sum5 += i
   for i in column1:
@@ -118,12 +118,17 @@ def row_creator(list1 , n):
     sums1 += i
   for i in diag2:
     sums2 += i
-  
-  if sum1 == sum2 and sum2 == sum3 and sum3 == sum4 and sum4 == sum5 and sum5 == sum_1 and sum_1 == sum_2 and sum_2 == sum_3 and sum_3 == sum_4 and sum_4 == sum_5 and sum_5 == diag1 and diag1 == diag2:
-    return "This is a magic square"
+  if n== 2:
+    if sum1 == sum2 and sum2 == sum_1 and sum_1 == sum_2 and sum_2 == sums1 and sums1 == sums2:
+      return "this is a magic square"
+  elif n == 3:
+    if sum1 == sum2 and sum2 == sum_1 and sum_1 == sum_2 and sum_2 == sums1 and sums1 == sums2 and sum_3 == sum_2 and sum2 ==sum3:
+      return "this is a magic square"
+  elif n == 4:
+    if sum1 == sum2 and sum2 == sum_1 and sum_1 == sum_2 and sum_2 == sums1 and sums1 == sums2 and sum_3 == sum_2 and sum2 ==sum3 and sum3 == sum4 and sum_3 == sum_4:
+      return "this is a magic square"
+  elif n == 5:
+    if sum1 == sum2 and sum2 == sum3 and sum3 == sum4 and sum4 == sum5 and sum5 == sum_1 and sum_1 == sum_2 and sum_2 == sum_3 and sum_3 == sum_4 and sum_4 == sum_5 and sum_5 == diag1 and diag1 == diag2:
+      return "This is a magic square"
   
 main()
-
-
-#BU AMK kODU ÇALIŞMIYOR
-
