@@ -130,5 +130,5 @@ def row_creator(list1 , n):
   elif n == 5:
     if sum1 == sum2 and sum2 == sum3 and sum3 == sum4 and sum4 == sum5 and sum5 == sum_1 and sum_1 == sum_2 and sum_2 == sum_3 and sum_3 == sum_4 and sum_4 == sum_5 and sum_5 == diag1 and diag1 == diag2:
       return "This is a magic square"
-  
+
 main()
