@@ -97,3 +97,14 @@ print(foo[0:9:2])   #2 ser 2 ser yazar
 #her 2 harfin arasina * eklemek
 foo[::2] = ["*"] * 5
 print(foo)
+
+# .issubset() bir listenin yada tuplenin bi diger listenin subseti olup olmadigini olcer
+
+# .union() ikisini toplayip yeni bir liste olarak verir. duplicate icermez
+# | is mark of union if you dont want to use .union use this
+#.intersection() ikisinin kesisimini yeni bir liste olarak verir.
+# & is mark of intersection if you dont want to use .intersection use this
+#.difference() birbirinde olup digerinde olmayan
+# - is mark of intersection if you dont want to use .difference use this
+
+# A printing tip : f"{foo:,} yaparsan 16161616 yi 16,161,616 seklinde yazar
