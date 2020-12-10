@@ -14,7 +14,7 @@ def main():
 
   table(row1,row2,row3,row4,row5,row6,row7,row8,row9)
   print("++++++++++++++++++++++++++++++++++++++++++++++++++")
-  manual(10)
+  #manual(10)
   #print(choose((input("Enter Row")),int(input("Enter Column"))))
   
   table(row1,row2,row3,row4,row5,row6,row7,row8,row9)
@@ -92,74 +92,46 @@ def choose(row,column):
       return "Your Seat Was reserved by another person"
   return "YOUR RESERVATION HAS BEEN DONE SUCCESFULLY"
   
-
 def manual(price):
-  for i in range(0,len(row1)):
+  if (price%10) != 0:
+    return "INVALID PRICE"
+  for i in range(0,10):
     if price == row1[i]:
       row1.pop(i)
       row1.insert(i,0)
       break
-    else:
-      for i in range(0,len(row2)):
-        if price == row2[i]:
-          row2.pop(i)
-          row2.insert(i,0)
-          break
-        else:
-          for i in range(0,len(row3)):
-            if price == row3[i]:
-              row3.pop(i)
-              row3.insert(i,0)
-              break
-            else:
-              for i in range(0,len(row4)):
-                if price == row4[i]:
-                  row4.pop(i)
-                  row4.insert(i,0)
-                  break
-                else:
-                  for i in range(0,len(row5)):
-                    if price == row5[i]:
-                      row5.pop(i)
-                      row5.insert(i,0)
-                      break
-                    else:
-                      for i in range(0,len(row6)):
-                        if price == row6[i]:
-                          row6.pop(i)
-                          row6.insert(i,0)
-                          break
-                        else:
-                          for i in range(0,len(row7)):
-                            if price == row7[i]:
-                              row7.pop(i)
-                              row7.insert(i,0)
-                              break
-                            else:
-                              for i in range(0,len(row8)):
-                                if price == row8[i]:
-                                  row8.pop(i)
-                                  row8.insert(i,0)
-                                  break
-                                else:
-                                  for i in range(0,len(row9)):
-                                    if price == row9[i]:
-                                      row9.pop(i)
-                                      row9.insert(i,0)
-                                      break
-                                    else:
-                                      return "WE COULND'T FIND A SEAT WITH YOUR CRITERIA"
-                  
-      
-    
-
-      
-
-    
-
-    
-    
-
-  
+    elif price == row2[i]:
+      row2.pop(i)
+      row2.insert(i,0)
+      break
+    elif price == row3[i]:
+      row3.pop(i)
+      row3.insert(i,0)
+      break
+    elif price == row4[i]:
+      row4.pop(i)
+      row4.insert(i,0)
+      break
+    elif price == row5[i]:
+      row5.pop(i)
+      row5.insert(i,0)
+      break
+    elif price == row6[i]:
+      row6.pop(i)
+      row6.insert(i,0)
+      break
+    elif price == row7[i]:
+      row7.pop(i)
+      row7.insert(i,0)
+      break
+    elif price == row8[i]:
+      row8.pop(i)
+      row8.insert(i,0)
+      break
+    elif price == row9[i]:
+      row9.pop(i)
+      row9.insert(i,0)
+      break
+  return "YOUR RESERVATION HAS BEEN DONE SUCCESFULLY"
 
 main()
